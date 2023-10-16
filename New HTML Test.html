@@ -5,70 +5,9 @@
     <title>Grimlock's Grotto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="CSS_TEST.css" />
-    <style>
-      .sidebar {
-        width: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: #333;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-        z-index: 1; /* Place the sidebar in front */
-      }
-
-      .sidebar a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-        transform: translateX(-100%); /* Start off the screen */
-      }
-
-      .sidebar a.slide-in {
-        transform: translateX(0); /* Slide-in effect */
-      }
-
-      .sidebar a:hover {
-        color: #ff0000;
-      }
-
-      .hamburger-button {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        cursor: pointer;
-        font-size: 20px;
-      }
-
-      .container {
-        margin-left: 0; /* Initial margin is set to 0 */
-        padding: 20px;
-        position: relative; /* Needed for z-index to work */
-        transition: margin-left 0.5s; /* Add transition for smooth shifting */
-      }
-
-      .container-shifted {
-        margin-left: 250px; /* Adjust margin when sidebar is open */
-      }
-
-      .image-circle {
-        width: 150px; /* Adjust the size of the circle */
-        height: 150px; /* Adjust the size of the circle */
-        border-radius: 50%; /* Create a circular shape */
-        background-image: url("images/Twitch logo transparent.png");
-        background-size: cover;
-        background-position: center;
-        margin: 0 auto;
-        margin-bottom: 20px;
-      }
-    </style>
   </head>
   <body>
+    <div class="banner"></div>
     <div class="container">
       <!-- Sidebar Navigation and Hamburger Button -->
       <div class="sidebar" id="sidebar">
@@ -126,7 +65,7 @@
         hamburgerButton.addEventListener("click", function () {
           if (sidebar.style.width === "0px" || sidebar.style.width === "") {
             sidebar.style.width = "250px";
-            container.classList.add("container-shifted"); // Apply the shifted class
+            container.classList.add("container-shifted");
             sidebarLinks.forEach((link, index) => {
               setTimeout(() => {
                 link.classList.add("slide-in");
@@ -134,7 +73,7 @@
             });
           } else {
             sidebar.style.width = "0";
-            container.classList.remove("container-shifted"); // Remove the shifted class
+            container.classList.remove("container-shifted");
             sidebarLinks.forEach((link) => {
               link.classList.remove("slide-in");
             });

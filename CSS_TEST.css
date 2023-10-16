@@ -1,9 +1,8 @@
 :root {
-  --sidebar-bg-start: rgb(55, 0, 128); /* Define the starting color for the sidebar gradient */
-  --sidebar-bg-end: rgba(0, 0, 0, 0.8); /* Define the ending color for the sidebar gradient */
+  --sidebar-bg-start: rgb(55, 0, 128);
+  --sidebar-bg-end: rgba(0, 0, 0, 0.8);
 }
 
-/* Apply a gradient background */
 body {
   background: linear-gradient(to left, var(--sidebar-bg-start), white);
   margin: 0;
@@ -12,11 +11,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  /* transition: filter 0.3s; */
-  /* filter: blur(0); */
 }
 
-/* Sidebar navigation styles */
 .sidebar {
   width: 0;
   height: 100%;
@@ -46,7 +42,6 @@ body {
   color: rgb(255, 0, 0);
 }
 
-/* Hamburger icon button to open and close the sidebar */
 .hamburger-button {
   font-size: 30px;
   position: fixed;
@@ -57,7 +52,6 @@ body {
   color: rgb(0, 0, 0);
 }
 
-/* Content container */
 .container {
   flex: 1;
   display: flex;
@@ -66,13 +60,11 @@ body {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   padding: 20px;
-  /* Remove the 'animation' property */
   margin-right: 0;
   position: relative;
   z-index: 1;
 }
 
-/* Add styles to your content, like headers and text */
 h1 {
   font-size: 36px;
   color: rgb(55, 0, 128);
@@ -80,14 +72,85 @@ h1 {
 
 p {
   font-size: 18px;
-  color: #333; /* Dark gray text color */
+  color: #333;
 }
 
-/* Example of positioning elements within the flexbox container */
 .element {
   margin: 10px;
   padding: 10px;
   border: 2px solid rgb(55, 0, 128);
   border-radius: 5px;
   text-align: center;
+}
+
+.sidebar {
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.sidebar a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  transform: translateX(-100%);
+}
+
+.sidebar a.slide-in {
+  transform: translateX(0);
+}
+
+.sidebar a:hover {
+  color: #ff0000;
+}
+
+.hamburger-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container {
+  margin-left: 0;
+  padding: 20px;
+  position: relative;
+  transition: margin-left 0.5s;
+}
+
+.container-shifted {
+  margin-left: 250px;
+}
+
+.image-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("images/Twitch logo transparent.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.banner {
+  width: 1280px;
+  height: 720px;
+  background-image: url("images/wallpapersden.com_octane-apex-legends_2560x1440.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
