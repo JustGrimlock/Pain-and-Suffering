@@ -13,6 +13,7 @@ body {
   flex-direction: row;
 }
 
+/* Sidebar Styles */
 .sidebar {
   width: 0;
   height: 100%;
@@ -27,9 +28,10 @@ body {
   transition: width 0.3s;
   overflow: hidden;
   backdrop-filter: blur(10px); /* Apply frosted glass filter to the sidebar */
-  opacity: 0.3; /* Set opacity to 70% for 30% transparency */
+  opacity: 0.9; /* Set opacity to 70% for 30% transparency */
 }
 
+/* Sidebar Links */
 .sidebar a {
   padding: 10px 20px;
   text-decoration: none;
@@ -40,10 +42,12 @@ body {
   position: relative;
 }
 
+/* Sidebar Link Hover */
 .sidebar a:hover {
   color: rgb(255, 0, 0);
 }
 
+/* Hamburger Button */
 .hamburger-button {
   font-size: 30px;
   position: fixed;
@@ -54,6 +58,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
+/* Container Styles */
 .container {
   flex: 1;
   display: flex;
@@ -67,16 +72,19 @@ body {
   z-index: 1;
 }
 
+/* H1 Styles */
 h1 {
   font-size: 36px;
   color: rgb(55, 0, 128);
 }
 
+/* P Styles */
 p {
   font-size: 18px;
   color: #333;
 }
 
+/* Element Styles */
 .element {
   margin: 10px;
   padding: 10px;
@@ -85,6 +93,7 @@ p {
   text-align: center;
 }
 
+/* Sidebar (Mobile) */
 .sidebar {
   width: 0;
   position: fixed;
@@ -100,6 +109,7 @@ p {
   opacity: 1; /* Reset opacity when sidebar is closed */
 }
 
+/* Sidebar Links (Mobile) */
 .sidebar a {
   padding: 8px;
   text-decoration: none;
@@ -110,15 +120,18 @@ p {
   transform: translateX(-100%);
 }
 
+/* Sidebar Links Slide In (Mobile) */
 .sidebar a.slide-in {
   transform: translateX(0);
 }
 
+/* Sidebar Link Hover (Mobile) */
 .sidebar a:hover {
   color: #ff0000;
 }
 
-.hamburger-button {
+/* Hamburger Button (Mobile) */
+hamburger-button {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -126,6 +139,7 @@ p {
   font-size: 20px;
 }
 
+/* Container Shifted (Mobile) */
 .container {
   margin-left: 0;
   padding: 20px;
@@ -137,6 +151,7 @@ p {
   margin-left: 250px;
 }
 
+/* Image Circle */
 .image-circle {
   width: 150px;
   height: 150px;
@@ -148,6 +163,7 @@ p {
   margin-bottom: 20px;
 }
 
+/* Banner Styles */
 .banner {
   width: 100%;
   height: 100vh; /* Scale to the whole screen */
@@ -159,4 +175,56 @@ p {
   left: 0;
   z-index: -1; /* Place behind the content */
   transform: translateZ(0); /* Promote to its own layer for smoother scrolling */
+}
+/* Hamburger Button (Mobile) */
+.hamburger-button {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+/* Hamburger Button (Mobile) when the sidebar is opened */
+.container-shifted .hamburger-button {
+  left: 260px; /* Adjust the left position when the sidebar is open */
+}
+
+/* Sidebar (Mobile) */
+.sidebar {
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
+  backdrop-filter: none; /* Reset backdrop filter when sidebar is closed */
+  opacity: 1; /* Reset opacity when sidebar is closed */
+}
+
+/* Sidebar Links (Mobile) */
+.sidebar a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  transform: translateX(-100%);
+}
+
+/* Sidebar Links Slide In (Mobile) */
+.sidebar a.slide-in {
+  transform: translateX(0);
+}
+
+/* Sidebar Link Hover (Mobile) */
+.sidebar a:hover {
+  color: #ff0000;
 }
